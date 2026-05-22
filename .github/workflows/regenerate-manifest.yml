@@ -1,0 +1,47 @@
+name: Regenerate manifest
+
+# Runs when anything under content/ changes EXCEPT manifest.json itself.
+# The exclusion prevents the workflow from re-triggering on its own commit.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "!content/manifest.json"
+      - "scripts/generate-manifest.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerate-manifest
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need the token with write perms (default GITHUB_TOKEN is fine here)
+          # and a real ref so we can push back.
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate manifest
+        run: python3 scripts/generate-manifest.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet content/manifest.json; then
+            echo "Manifest unchanged, nothing to do."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/manifest.json
+          git commit -m "Auto-regenerate manifest"
+          git push
