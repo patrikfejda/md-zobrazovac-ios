@@ -2,34 +2,34 @@
   "entries": [
     {
       "kind": "markdown",
-      "path": "pages/about.md",
+      "path": "about.md",
       "sha256": "e0825451be61a423721ec124b71667952d4bd1a8e86ff151846d62fd17c39f40",
       "size": 679,
       "title": "O aplikácii"
     },
     {
       "kind": "markdown",
-      "path": "pages/index.md",
-      "sha256": "a777e0de17b457bdaca25c98f3a44c0388eac9731379773900842580e63f337d",
-      "size": 600,
+      "path": "index.md",
+      "sha256": "c4b0ce2ba0323c94805c98727546a3c8b949629f9b058b70746fcc20f80be33e",
+      "size": 634,
       "title": "Vitaj"
     },
     {
       "kind": "markdown",
-      "path": "pages/markdown-cheatsheet.md",
+      "path": "markdown-cheatsheet.md",
       "sha256": "b1aa9bfcadc927b14dcd39f64fae9c7ce7b80475c9255439bb004e70ad54be6a",
       "size": 397,
       "title": "Markdown cheatsheet"
     },
     {
       "kind": "markdown",
-      "path": "pages/notes/prva-poznamka.md",
-      "sha256": "01aacf34b1111928c822863d3d88c8379883acb955940137b855d7217e2ea68f",
-      "size": 426,
+      "path": "notes/prva-poznamka.md",
+      "sha256": "2fd588042fa498a2e6baac67c0c1de0d166a9c89d84f01001f95164ff5fe627f",
+      "size": 378,
       "title": "Prvá poznámka"
     }
   ],
-  "generatedAt": "2026-05-22T11:15:44Z",
+  "generatedAt": "2026-05-22T11:26:10Z",
   "schemaVersion": 1,
   "title": "Markdown zobrazovač"
 }

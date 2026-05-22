@@ -6,10 +6,9 @@ Aplikácia stiahla tento súbor z GitHubu a uložila si ho lokálne — odteraz 
 
 ## Ako pridať nový obsah
 
-1. Vytvor nový `.md` súbor v priečinku `content/pages/`
-2. Spusti `python3 scripts/generate-manifest.py`
-3. Commitni a pushni na GitHub
-4. V appke v Nastaveniach klikni *Stiahnuť obsah*
+1. Vytvor nový `.md` súbor v `content/` (alebo v podpriečinku — vznikne hierarchia)
+2. Commitni a pushni na GitHub — workflow automaticky pregeneruje `manifest.json`
+3. V appke v Nastaveniach klikni *Stiahnuť obsah*
 
 ## Ako si zmeniť vzhľad
 

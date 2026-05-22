@@ -11,7 +11,7 @@ Offline-friendly iOS/macOS aplikácia, ktorá si stiahne markdown obsah z GitHub
 ├── ios/             # Swift/SwiftUI aplikácia
 ├── content/         # Zdrojový obsah (toto sa servuje cez GitHub)
 │   ├── manifest.json
-│   ├── pages/       # .md súbory
+│   ├── *.md         # markdown stránky (v koreni alebo v podpriečinkoch)
 │   └── assets/      # obrázky a ďalšie binárky
 ├── scripts/
 │   └── generate-manifest.py
@@ -20,15 +20,15 @@ Offline-friendly iOS/macOS aplikácia, ktorá si stiahne markdown obsah z GitHub
 
 ## Ako to funguje
 
-1. **Zdroj dát.** Obsah žije v priečinku `content/` v tomto repe. Každý `content/pages/*.md` je samostatná stránka. Obrázky/binárky idú do `content/assets/`.
+1. **Zdroj dát.** Obsah žije v priečinku `content/` v tomto repe. Každý `.md` súbor pod `content/` je samostatná stránka. Podpriečinky vytvárajú hierarchiu, ktorá sa v appke zobrazí ako drill-down knižnica. Obrázky/binárky idú do `content/assets/`.
 2. **Manifest.** Skript `scripts/generate-manifest.py` prejde `content/` a vyrobí `content/manifest.json` — zoznam všetkých súborov so SHA-256 hashom a veľkosťou. Tento súbor je single source of truth pre app.
 3. **App.** Pri spustení (alebo po stlačení „Synchronizovať") stiahne `manifest.json`, porovná hashe s lokálnou kópiou a stiahne len zmenené súbory. Všetko uloží do `Application Support/content/` na zariadení → ďalej funguje offline.
 
 ## Setup obsahu
 
 ```bash
-# 1. Pridáš/upravíš markdown v content/pages/
-$ vim content/pages/moja-stranka.md
+# 1. Pridáš/upravíš markdown v content/
+$ vim content/moja-stranka.md
 
 # 2. Pregeneruješ manifest
 $ python3 scripts/generate-manifest.py
