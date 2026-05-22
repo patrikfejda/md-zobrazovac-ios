@@ -1,4 +1,4 @@
-# Markdown ťahák
+# Markdown cheatsheet
 
 Toto, čo zobrazovač podporuje.
 
