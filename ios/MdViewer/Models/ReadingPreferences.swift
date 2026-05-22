@@ -33,5 +33,5 @@ enum AppStorageKey {
 
 enum AppDefaults {
     static let fontScale: Double = 1.0
-    static let manifestURL: String = ""
+    static let manifestURL: String = "https://raw.githubusercontent.com/patrikfejda/md-zobrazovac-ios/main/content/manifest.json"
 }
