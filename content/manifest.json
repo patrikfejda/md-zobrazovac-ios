@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "kind": "markdown",
+      "path": "pages/about.md",
+      "sha256": "e0825451be61a423721ec124b71667952d4bd1a8e86ff151846d62fd17c39f40",
+      "size": 679,
+      "title": "O aplikácii"
+    },
+    {
+      "kind": "markdown",
+      "path": "pages/index.md",
+      "sha256": "a777e0de17b457bdaca25c98f3a44c0388eac9731379773900842580e63f337d",
+      "size": 600,
+      "title": "Vitaj"
+    },
+    {
+      "kind": "markdown",
+      "path": "pages/markdown-cheatsheet.md",
+      "sha256": "8b8241307ccdf0a3a5be65928838be44d461fa9e0b358c7ace8c85e23f6abab5",
+      "size": 388,
+      "title": "Markdown ťahák"
+    }
+  ],
+  "generatedAt": "2026-05-21T19:31:33Z",
+  "schemaVersion": 1,
+  "title": "Markdown zobrazovač"
+}
