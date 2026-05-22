@@ -37,3 +37,5 @@ func hello() {
 ---
 
 Po čiare ide ďalšia sekcia.
+
+test
