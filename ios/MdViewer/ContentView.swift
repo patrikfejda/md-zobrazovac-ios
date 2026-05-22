@@ -9,7 +9,7 @@ struct ContentView: View {
         NavigationStack {
             Group {
                 if let manifest = store.manifest, !manifest.pages.isEmpty {
-                    LibraryView(manifest: manifest)
+                    LibraryView(folder: manifest.libraryTree())
                 } else {
                     EmptyLibraryView(
                         hasManifestURL: !manifestURL.isEmpty,
@@ -19,6 +19,12 @@ struct ContentView: View {
                 }
             }
             .navigationTitle(store.manifest?.title ?? "Markdown zobrazovač")
+            .navigationDestination(for: LibraryFolder.self) { folder in
+                LibraryView(folder: folder)
+            }
+            .navigationDestination(for: ContentEntry.self) { entry in
+                PageView(entry: entry)
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
