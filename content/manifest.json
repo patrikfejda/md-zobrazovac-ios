@@ -20,9 +20,16 @@
       "sha256": "8b8241307ccdf0a3a5be65928838be44d461fa9e0b358c7ace8c85e23f6abab5",
       "size": 388,
       "title": "Markdown ťahák"
+    },
+    {
+      "kind": "markdown",
+      "path": "pages/notes/prva-poznamka.md",
+      "sha256": "01aacf34b1111928c822863d3d88c8379883acb955940137b855d7217e2ea68f",
+      "size": 426,
+      "title": "Prvá poznámka"
     }
   ],
-  "generatedAt": "2026-05-21T19:31:33Z",
+  "generatedAt": "2026-05-22T11:05:33Z",
   "schemaVersion": 1,
   "title": "Markdown zobrazovač"
 }
